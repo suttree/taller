@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Taller | taller.troisien.com</title>
+<link rel="shortcut icon" href="/images/troisen.ico" /> 
+<link href="css/troisen.css" media="screen" rel="stylesheet" type="text/css" /> 
+<meta charset="utf-8">
+<meta property="og:image" content="http://troisen.com/images/troisen.png"/>
+<meta property="og:title" content="Occupy Offline | occupy.troisen.com" />
+<meta property="og:url" content="http://troisen.com/occupy-offline.html" />
+</head>
+<body>
+<h1>troisien, not one without the other</h1>
+<h2>Taller</h2>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20518588-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+function gotPosition(pos)
+{
+  var outputStr = pos.coords.altitude.toFixed(1) + 'm';
+  document.getElementById("count").innerHTML = outputStr;
+
+  var outputStr = pos.coords.altitudeAccuracy.toFixed(1) + 'm';
+  document.getElementById("accuracy").innerHTML = outputStr;
+}
+
+function errorGettingPosition(err)
+{
+  if(err.code==1)
+  {
+    alert("User denied geolocation.");
+  }
+  else if(err.code==2)
+  {
+    alert("Position unavailable.");
+  }
+  else if(err.code==3)
+  {
+    alert("Timeout expired.");
+  }
+  else
+  {
+    alert("ERROR:"+ err.message);
+  }
+}
+</script>
+<div id='all'>
+<div id='taller'>
+<p id='count'>
+Waiting...
+<script type='text/javascript'>
+navigator.geolocation.getCurrentPosition( gotPosition, errorGettingPosition, {'enableHighAccuracy':true,'timeout':100,'maximumAge':0});
+</script>
+</p>
+<p id='accuracy'> </p>
+</div>
+<div id='footer-fixed'>
+knots in hair / copacetic autotelic anti-pioneer
+</div>
+</body>
+</html>

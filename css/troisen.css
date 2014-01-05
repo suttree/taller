@@ -1,0 +1,92 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300);
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
+
+body {
+background-color: #fea621;
+background-image:url('../images/troisen.jpeg');
+background-repeat: no-repeat;
+background-position: right bottom;
+font-family: 'Open Sans Condensed', sans-serif;
+/*font-family: "Arimo", "Helvetica Neue", Helvetica, sans-serif;*/
+/*font:normal small 'Gill Sans','Gill Sans MT',Verdana,sans-serif;*/
+line-height:1.75;
+min-height: 100%;
+width: 95%;
+color: #333;
+/*text-shadow: 0px 1px 1px #bbb;*/
+margin: 1em;
+}
+h2 a {
+text-decoration: none;
+}
+#all {
+color: #000;
+margin-left: 0.2em;
+font-family: 'Merriweather', serif;
+text-shadow: 0px 1px 1px #bbb;
+}
+#all ul li span {
+font-size: 0.5em;
+margin-left: 0.5em;
+}
+#all ul li {
+/*list-style-type:georgian;*/
+list-style-type:katakana-iroha;
+/*background-color: #feb369;*/
+/*margin: 4px;*/
+/*padding: 0.3em 0.5em;*/
+}
+div#cap, div#occupy, div#count, div#taller {
+background-color:#fea621;
+opacity:0.9;
+filter:alpha(opacity=90);
+}
+div#cap p, div#occupy p, div#troisen p {
+padding: 10px;
+background-color: #feb165;
+}
+div#pic img {
+box-shadow: 0px 0px 5px #000;
+max-width: 800px;
+overflow: hidden;
+}
+div#troisen {
+margin-top: 2em;
+min-width: 480px;
+}
+div#troisen p {
+display: inline;
+}
+div#steps {
+position: relative;
+}
+div#count {
+width: 100%;
+height: 80%;
+text-align: center;
+box-shadow: 0px 0px 2px #555;
+line-height: 800px;
+}
+#steps, #count {
+font-size: 128px;
+}
+#footer, #footer-fixed {
+float: right;
+text-align: right;
+vertical-align: middle;
+font-size: small;
+font-weight: bold;
+background-color: #feb369;
+padding: 0.3em;
+padding-left: 0.5em;
+margin-bottom: 0.5em;
+clear: both;
+}
+#footer-fixed {
+position: fixed;
+bottom: 30px;
+right: 2.5em;
+margin-bottom:-30px;
+z-index: -1;
+}
